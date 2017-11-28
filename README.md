@@ -6,10 +6,11 @@ An income forecast web-service written on Python with flask
 ### A. Prerequisites
 
 To run this web-service, you need to have the following tools installed and configured on your computer : 
-    a. Pandas
-    b. NumPy 
-    c. Sci-kit
-    d. Flask
+
+    1. Pandas
+    2. NumPy 
+    3. Sci-kit
+    4. Flask
 
 ### B. Running the Service
 
