@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+  <title>Income Prediction : Will I win or will you lose ?</title>
+</head>
+<body>
+
+<div class="container">  
+  <form id="contact" action="http://127.0.0.1:5000/predict" method="POST">
+    <h3><b>Income Prediction Form</b></h3>
+    <h4>Tell us about a specific person</h4>
+
+    <fieldset>
+      <input name="age" placeholder="Age" type="text" tabindex="1" required autofocus>
+    </fieldset>
+
+    <fieldset>
+      Working Class :
+      <select name="workclass">
+        <option value="private">Private</option>
+        <option value="self-emp-not-inc">Self-emp-not-inc</option>
+        <option value="self-emp-inc">Self-emp-inc</option>
+        <option value="federal-gov">Federal-gov</option>
+        <option value="local-gov">Local-gov</option>
+        <option value="state-gov">State-gov</option>
+        <option value="without-pay">Without-pay</option>
+        <option value="never-worked">Never-worked</option>
+     </select>
+    </fieldset>
+
+    <fieldset>
+      <input name="fnlwgt" placeholder="Final Sampling Weight" type="text" tabindex="3" required>
+    </fieldset>
+
+    <fieldset>
+      Education :
+      <select name="education">
+        <option value="preschool">Preschool</option>
+        <option value="1st-4th">1st-4th</option>
+        <option value="5th-6th">5th-6th</option>
+        <option value="7th-8th">7th-8th</option>
+        <option value="9th">9th</option>
+        <option value="10th">10th</option>
+        <option value="11th">11th</option>
+        <option value="12th">12th</option>
+        <option value="HS-grad">HS-grad</option>
+        <option value="some-college">Some-college</option>
+        <option value="assoc-voc">Assoc-voc</option>
+        <option value="assoc-acdm">Assoc-acdm</option>
+        <option value="bachelors">Bachelors</option>
+        <option value="masters">Masters</option>
+        <option value="prof-school">Prof-school</option>
+        <option value="doctorate">Doctorate</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <input name="education_num" placeholder="Education Number" type="text" tabindex="5" required>
+    </fieldset>
+
+    <fieldset>
+      Marital Status :
+      <select name="marital_status">
+        <option value="married-civ-spouse">Married-civ-spouse</option>
+        <option value="divorced">Divorced</option>
+        <option value="never-married">Never-married</option>
+        <option value="separated">Separated</option>
+        <option value="widowed">Widowed</option>
+        <option value="married-spouse-absent">Married-spouse-absent</option>
+        <option value="married-af-spouse">Married-AF-spouse</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      Occupation :
+      <select name="occupation">
+        <option value="tech-support">Tech-support</option>
+        <option value="craft-repair">Craft-repair</option>
+        <option value="sales">Sales</option>
+        <option value="exec-managerial">Exec-managerial</option>
+        <option value="prof-specialty">Prof-specialty</option>
+        <option value="handlers-cleaners">Handlers-cleaners</option>
+        <option value="machine-op-inspct">Machine-op-inspct</option>
+        <option value="adm-clerical">Adm-clerical</option>
+        <option value="farming-fishing">Farming-fishing</option>
+        <option value="transport-moving">Transport-moving</option>
+        <option value="priv-house-serv">Priv-house-serv</option>
+        <option value="protective-serv">Protective-serv</option>
+        <option value="armed-Forces">Armed-Forces</option>
+        <option value="other-service">Other-service</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      Relationship :
+      <select name="relationship">
+        <option value="wife">Wife</option>
+        <option value="own-child">Own-child</option>
+        <option value="husband">Husband</option>
+        <option value="not-in-family">Not-in-family</option>
+        <option value="other-relative">Other-relative</option>
+        <option value="unmarried">Unmarried</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      Race :
+      <select name="race">
+        <option value="white">White</option>
+        <option value="asian-pac-islander">Asian-Pac-Islander</option>
+        <option value="amer-indian-eskimo">Amer-Indian-Eskimo</option>
+        <option value="black">Black</option>
+        <option value="other">Other</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      Sex :
+      <select name="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <input name="capital_gain" placeholder="Capital Gain" type="text" tabindex="11" required>
+    </fieldset>
+
+    <fieldset>
+      <input name="capital_loss" placeholder="Capital Loss" type="text" tabindex="12" required>
+    </fieldset>
+
+    <fieldset>
+      <input name="hours_per_week" placeholder="Working Hours per Week" type="text" tabindex="13" required>
+    </fieldset>
+
+    <fieldset>
+      Native Country :
+      <select name="native_country">
+        <option value="cambodia">Cambodia</option>
+        <option value="canada">Canada</option>
+        <option value="china">China</option>
+        <option value="columbia">Columbia</option>
+        <option value="cuba">Cuba</option>
+        <option value="dominican-republic">Dominican-Republic</option>
+        <option value="ecuador">Ecuador</option>
+        <option value="el-salvador">El-Salvador</option>
+        <option value="england">England</option>
+        <option value="france">France</option>
+        <option value="germany">Germany</option>
+        <option value="greece">Greece</option>
+        <option value="guatemala">Guatemala</option>
+        <option value="haiti">Haiti</option>
+        <option value="holand-netherlands">Holand-Netherlands</option>
+        <option value="honduras">Honduras</option>
+        <option value="hong">Hong</option>
+        <option value="hungary">Hungary</option>
+        <option value="india">India</option>
+        <option value="iran">Iran</option>
+        <option value="ireland">Ireland</option>
+        <option value="italy">Italy</option>
+        <option value="jamaica">Jamaica</option>
+        <option value="japan">Japan</option>
+        <option value="laos">Laos</option>
+        <option value="mexico">Mexico</option>
+        <option value="nicaragua">Nicaragua</option>
+        <option value="outlying-us(guam-usvi-etc)">Outlying-US(Guam-USVI-etc)</option>
+        <option value="peru">Peru</option>
+        <option value="philippines">Philippines</option>
+        <option value="poland">Poland</option>
+        <option value="portugal">Portugal</option>
+        <option value="puerto-rico">Puerto-Rico</option>
+        <option value="scotland">Scotland</option>
+        <option value="south">South</option>
+        <option value="taiwan">Taiwan</option>
+        <option value="thailand">Thailand</option>
+        <option value="trinidad&tobago">Trinidad&Tobago</option>
+        <option value="united-states">United-States</option>
+        <option value="vietnam">Vietnam</option>
+        <option value="yugoslavia">Yugoslavia</option>
+      </select>
+    </fieldset>
+    
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict the income!</button>
+    </fieldset>
+    <p class="copyright">Designed by Campur2 c. 2017</p>
+    
+  </form>
+</div>
+
+
+</body>
+</html> 
